@@ -1,0 +1,25 @@
+# dependencies
+/node_modules
+
+# next.js
+/.next/
+/out/
+*.tsbuildinfo
+next-env.d.ts
+
+# local database (contains form submissions — never commit)
+/we-r-hvac.db
+/we-r-hvac.db-*
+
+# secrets
+.env
+.env*.local
+
+# cached Google reviews (fetched fresh at build time)
+/content/reviews.json
+
+# misc
+.DS_Store
+*.pem
+npm-debug.log*
+/.idea/*

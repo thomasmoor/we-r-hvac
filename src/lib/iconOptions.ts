@@ -1,0 +1,20 @@
+// Icon names editors can pick in the admin. Mapped to Lucide icons in src/components/Icon.tsx.
+export const iconOptions = [
+  { label: 'Snowflake (cooling)', value: 'snowflake' },
+  { label: 'Flame (heating)', value: 'flame' },
+  { label: 'Wrench (repair)', value: 'wrench' },
+  { label: 'Hammer (installation)', value: 'hammer' },
+  { label: 'Clipboard check (maintenance)', value: 'clipboard-check' },
+  { label: 'Gauge (diagnostics)', value: 'gauge' },
+  { label: 'Air vent (ducts)', value: 'air-vent' },
+  { label: 'Wind (airflow)', value: 'wind' },
+  { label: 'Thermometer + sun (heat pump)', value: 'thermometer-sun' },
+  { label: 'Leaf (air quality)', value: 'leaf' },
+  { label: 'Fan', value: 'fan' },
+  { label: 'Map pin', value: 'map-pin' },
+  { label: 'House', value: 'house' },
+  { label: 'Building', value: 'building' },
+  { label: 'Mountain', value: 'mountain' },
+  { label: 'Trees', value: 'trees' },
+  { label: 'Sun', value: 'sun' },
+]

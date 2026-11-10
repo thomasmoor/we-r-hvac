@@ -1,0 +1,440 @@
+// Initial content loaded by `npm run seed`. After seeding, edit everything in the admin.
+
+export const settings = {
+  companyName: 'We R HVAC',
+  legalName: 'We R HVAC LLC',
+  tagline: 'Heating & cooling you can count on in Glendale and nearby.',
+  phone: '(617) 600-0000',
+  email: 'contact@wearehvac.com',
+  address: 'My Street, 1000',
+  town: 'Glendale',
+  zip: 'CA 91203',
+  openHours: 'Mon-Fri 8am-6pm',
+  openingHoursSchema: 'Mo-Fr 08:00-18:00',
+  afterHoursNote: 'Outside opening hours? For emergencies, call us and leave a message — we reply as soon as possible.',
+  googleMapsUrl: 'https://maps.app.goo.gl/FogxQq5tQu6dCZEG8',
+  mapQuery: 'Glendale, CA 91203',
+  yearsInBusiness: 8,
+  license: 'License number(s): 12345678',
+  insured: 'Fully licensed and insured',
+  brands: [{ name: 'Carrier' }, { name: 'Daikin' }, { name: 'Lennox' }],
+  facebook: 'https://www.facebook.com/',
+  instagram: 'https://www.instagram.com/',
+  yelp: 'https://www.yelp.com/',
+  nextdoor: 'https://nextdoor.com/',
+  formEmail: 'contact@thomasmoor.org',
+  web3formsAccessKey: '',
+  siteUrl: 'https://thomasmoor.github.io/we-r-hvac',
+  gaMeasurementId: '',
+  googlePlaceId: '',
+  showReviews: false,
+}
+
+export const home = {
+  heroH1: 'HVAC Installation & Repair in Glendale, CA',
+  heroH2: 'Reliable Heating & Air Conditioning for Glendale Homes and Businesses',
+  heroText:
+    'For 8 years, We R HVAC has kept homes and businesses in Glendale and the surrounding communities comfortable. From AC troubleshooting and furnace repairs to new system installations and maintenance, you get an honest diagnosis, a clear explanation and work done properly.',
+  formTitle: 'Request service',
+  formSubtitle: 'Tell us what is going on — we will get back to you quickly.',
+  servicesTitle: 'Our Services',
+  servicesIntro:
+    'Heating, cooling and indoor air services for homes and light commercial properties — repaired, installed and maintained by licensed technicians.',
+  areasTitle: 'Service Areas',
+  areasIntro:
+    'We provide heating and air conditioning services in Glendale and surrounding communities. Not sure if we cover your street? Contact us to check availability in your neighborhood.',
+  metaTitle: 'We R HVAC | HVAC Installation & Repair in Glendale, CA',
+  metaDescription:
+    'Licensed and insured HVAC contractor in Glendale, CA. AC repair, furnace repair, heat pumps, HVAC installation and maintenance for Glendale, Burbank, Pasadena and nearby.',
+}
+
+export const about = {
+  h1: 'About We R HVAC',
+  h2: 'Honest heating and cooling service for Glendale and nearby communities',
+  body: `We R HVAC is a licensed and insured heating and air conditioning contractor based in Glendale, California. For 8 years we have helped homeowners and businesses in Glendale, Burbank, Pasadena and the surrounding communities stay comfortable through hot valley summers and cool foothill winters.
+
+We believe good HVAC service means more than fixing equipment. We take the time to find the real cause of a problem, explain it in plain language and recommend the option that makes sense for your property and budget — whether that is a simple repair, regular maintenance or a new, more efficient system.
+
+We install and service equipment from trusted manufacturers including Carrier, Daikin and Lennox, and we size and set up every system for the home it serves rather than the one in the brochure.
+
+Whether your air conditioner has stopped cooling, your furnace will not start or you are planning a replacement, contact us to talk through your options. Your comfort starts with the right HVAC solution.`,
+  brandsTitle: 'Brands we install',
+  metaDescription:
+    'We R HVAC is a licensed and insured heating and air conditioning contractor in Glendale, CA with 8 years of experience. Carrier, Daikin and Lennox installations.',
+}
+
+type ServiceSeed = {
+  title: string
+  slug: string
+  icon: string
+  image: string
+  imageAlt: string
+  credit: string
+  shortDescription: string
+  description: string
+  whyImportant: string
+  whatToExpect: { title: string; text: string }[]
+  metaDescription: string
+}
+
+export const services: ServiceSeed[] = [
+  {
+    title: 'Air Conditioning Repair',
+    slug: 'air-conditioning-repair',
+    icon: 'snowflake',
+    image: 'ac-repair.jpg',
+    imageAlt: 'Outdoor air conditioning condenser mounted on a brick wall',
+    credit: 'Unsplash – https://unsplash.com/photos/a-white-air-conditioner-sitting-on-top-of-a-brick-wall-JsPkVrHMQoo',
+    shortDescription: 'Diagnose and fix cooling problems to restore comfort fast.',
+    description: `When your air conditioner blows warm air, cycles on and off, leaks water or makes new noises, we find out why. Our technicians test the refrigerant circuit, electrical components, airflow and controls to pinpoint the actual fault instead of guessing.
+
+We repair central air systems, ductless mini-splits and packaged units, and we explain what failed, what it costs to fix and whether a repair is the sensible choice for the age and condition of your equipment.`,
+    whyImportant: `In the Glendale area, summer heat regularly pushes air conditioners to their limit. A small problem — a weak capacitor, a clogged condensate line, low refrigerant — can quickly turn into a failed compressor if the system keeps running in a stressed state.
+
+Repairing problems early protects the most expensive parts of the system, keeps energy bills under control and avoids being without cooling on the hottest day of the year.`,
+    whatToExpect: [
+      { title: 'Prompt scheduling', text: 'Tell us the symptoms and we book the earliest available visit — same day when possible.' },
+      { title: 'Full diagnosis', text: 'We check electrical parts, refrigerant pressures, airflow, drainage and thermostat settings.' },
+      { title: 'Clear options', text: 'You get an explanation of the problem and the price before any work starts.' },
+      { title: 'Repair and test', text: 'We fix the fault, then run the system and confirm it is cooling properly before we leave.' },
+    ],
+    metaDescription: 'Air conditioning repair in Glendale, CA. Fast AC troubleshooting and repair for central air, mini-splits and packaged units.',
+  },
+  {
+    title: 'HVAC Installation',
+    slug: 'hvac-installation',
+    icon: 'hammer',
+    image: 'hvac-installation.jpg',
+    imageAlt: 'Technicians installing HVAC equipment on a rooftop',
+    credit: 'Unsplash – https://unsplash.com/photos/a-couple-of-men-standing-on-top-of-a-roof-iS5GDeLDk0E',
+    shortDescription: 'Professional installation and replacement of heating and cooling systems.',
+    description: `Whether you are replacing a worn-out system or adding air conditioning for the first time, we install complete heating and cooling systems — air conditioners, furnaces, heat pumps and ductless mini-splits — from brands such as Carrier, Daikin and Lennox.
+
+Every installation starts with a load assessment of your home so the new equipment is correctly sized, followed by a clean, code-compliant installation and a full startup check.`,
+    whyImportant: `An HVAC system is one of the largest investments in a home, and installation quality matters as much as the brand on the box. An oversized or undersized system short-cycles, struggles with humidity, wears out sooner and costs more to run.
+
+Correct sizing, proper refrigerant charge, sealed connections and well-matched ductwork are what let a new system deliver the efficiency and comfort it was designed for.`,
+    whatToExpect: [
+      { title: 'Home assessment', text: 'We look at your home, current equipment, ductwork and comfort concerns.' },
+      { title: 'Written proposal', text: 'You receive clear system options with pricing, efficiency ratings and available rebates.' },
+      { title: 'Clean installation', text: 'We protect your home, remove the old equipment and install to manufacturer specifications.' },
+      { title: 'Startup and walkthrough', text: 'We test the system, set up the thermostat and show you how to operate and care for it.' },
+    ],
+    metaDescription: 'HVAC installation and replacement in Glendale, CA. Carrier, Daikin and Lennox air conditioners, furnaces, heat pumps and mini-splits.',
+  },
+  {
+    title: 'Heating & Furnace Repair',
+    slug: 'heating-furnace-repair',
+    icon: 'flame',
+    image: 'heating-furnace-repair.jpg',
+    imageAlt: 'Hand adjusting a modern digital thermostat on a wall',
+    credit: 'Unsplash – https://unsplash.com/photos/finger-adjusting-a-modern-digital-thermostat-on-wall-3_nf1qKJGf4',
+    shortDescription: 'Troubleshooting and repair to keep your heating system working.',
+    description: `If your furnace will not ignite, blows cold air, trips the breaker or keeps shutting off, we diagnose and repair gas furnaces, heat pumps and wall heaters. We check ignition, flame sensing, gas pressure, blower operation, safety switches and venting.
+
+We also look for the conditions that cause repeat failures — dirty filters, restricted airflow or a failing part — so the same problem does not come back next month.`,
+    whyImportant: `Southern California winters are mild, but cold nights in the foothills and valleys still call for reliable heat. Furnaces that sit unused for most of the year often develop problems the first time they are switched on.
+
+A properly working furnace is also a safety matter: cracked heat exchangers, blocked vents and faulty safety controls can create carbon monoxide risks. Professional repair keeps your heat both dependable and safe.`,
+    whatToExpect: [
+      { title: 'Safety-first inspection', text: 'We check gas connections, venting and safety controls along with the reported problem.' },
+      { title: 'Root-cause diagnosis', text: 'We identify why the part failed, not only which part failed.' },
+      { title: 'Upfront pricing', text: 'You approve the repair and price before we start.' },
+      { title: 'Verified operation', text: 'We run a full heating cycle and confirm correct temperatures before we leave.' },
+    ],
+    metaDescription: 'Furnace and heating repair in Glendale, CA. Gas furnace, heat pump and wall heater troubleshooting and repair.',
+  },
+  {
+    title: 'HVAC Maintenance',
+    slug: 'hvac-maintenance',
+    icon: 'clipboard-check',
+    image: 'hvac-maintenance.jpg',
+    imageAlt: 'Technician servicing an equipment control panel with a screwdriver',
+    credit: 'Unsplash – https://unsplash.com/photos/a-person-in-a-neon-yellow-shirt-using-a-screwdriver-on-an-electrical-panel-GXLPLG3_Vf4',
+    shortDescription: 'Inspections and tune-ups that keep your system running efficiently.',
+    description: `Our maintenance visits cover both heating and cooling: we clean and inspect the outdoor coil, check refrigerant levels, test electrical components, clear the condensate drain, inspect the furnace burners and safety controls, check the blower and replace or recommend filters.
+
+We recommend a cooling tune-up in spring and a heating check in fall. You get a short report on the condition of your system and anything that needs attention.`,
+    whyImportant: `Most major HVAC breakdowns start as small, inexpensive problems that regular maintenance catches early. A clean, properly adjusted system uses less energy, cools and heats more evenly and lasts longer.
+
+Many equipment manufacturers also require documented maintenance to keep warranties valid.`,
+    whatToExpect: [
+      { title: 'Seasonal visit', text: 'We schedule your tune-up before the peak cooling or heating season.' },
+      { title: 'Multi-point check', text: 'Coils, refrigerant, electrical, drainage, burners, blower, filters and thermostat.' },
+      { title: 'Cleaning and adjustment', text: 'We clean what needs cleaning and adjust settings for efficient operation.' },
+      { title: 'Condition report', text: 'You learn what we found, with honest advice on what can wait and what cannot.' },
+    ],
+    metaDescription: 'HVAC maintenance and tune-ups in Glendale, CA. Seasonal AC and furnace inspections to prevent breakdowns and lower energy bills.',
+  },
+  {
+    title: 'HVAC Diagnostics',
+    slug: 'hvac-diagnostics',
+    icon: 'gauge',
+    image: 'hvac-diagnostics.jpg',
+    imageAlt: 'Technician testing electrical components with a multimeter',
+    credit: 'Unsplash – https://unsplash.com/photos/electrician-testing-electrical-panel-with-multimeter-PkHf7BUWbtk',
+    shortDescription: 'Identify system problems and explain the recommended corrective work.',
+    description: `Some HVAC problems are obvious; others are intermittent, seasonal or hidden — uneven temperatures between rooms, high energy bills, odd smells, short-cycling or a system that "works, but not well".
+
+We use proper test instruments to measure temperatures, pressures, electrical loads and airflow, then explain the findings and the recommended corrective work in plain language, with photos where helpful.`,
+    whyImportant: `Replacing parts until the problem goes away is expensive. An accurate diagnosis means you pay only for the repair that is actually needed.
+
+A thorough diagnostic visit is also valuable before buying a home, before deciding between repair and replacement, or when a previous repair did not solve the issue.`,
+    whatToExpect: [
+      { title: 'Listen first', text: 'We ask when the problem happens and what you have noticed.' },
+      { title: 'Measured testing', text: 'We take real measurements across the system instead of guessing.' },
+      { title: 'Plain-language findings', text: 'We show you what we found and explain the cause.' },
+      { title: 'Recommendations', text: 'You get prioritized options — repair, adjust or replace — with prices.' },
+    ],
+    metaDescription: 'HVAC system diagnostics in Glendale, CA. Accurate troubleshooting for uneven temperatures, high bills, short-cycling and intermittent faults.',
+  },
+  {
+    title: 'Air Duct Services',
+    slug: 'air-duct-services',
+    icon: 'air-vent',
+    image: 'air-duct-services.jpg',
+    imageAlt: 'Metal ventilation duct pipe',
+    credit: 'Unsplash – https://unsplash.com/photos/vent-pipe-RAliDqgJKbE',
+    shortDescription: 'Duct inspection, cleaning, sealing and airflow improvement.',
+    description: `Your ducts carry every bit of heated and cooled air in your home. We inspect ductwork for leaks, crushed or disconnected runs and blockages, clean ducts and registers, seal leaking joints and correct airflow problems that leave some rooms too hot or too cold.
+
+When ducts are beyond repair, we can replace sections or redesign runs to match a new system.`,
+    whyImportant: `Leaky ducts in attics and crawl spaces can waste a significant share of the energy you pay for, and poorly balanced ductwork is one of the most common causes of uncomfortable rooms.
+
+Clean, sealed and properly sized ducts help your system run efficiently, reduce dust and improve comfort throughout the home.`,
+    whatToExpect: [
+      { title: 'Airflow inspection', text: 'We check registers, accessible duct runs and airflow at each room.' },
+      { title: 'Findings with photos', text: 'We show you any leaks, damage or buildup we find.' },
+      { title: 'Cleaning or repair', text: 'We clean, seal, repair or replace sections as agreed.' },
+      { title: 'Balance check', text: 'We verify airflow afterwards so every room gets its share.' },
+    ],
+    metaDescription: 'Air duct cleaning, sealing and repair in Glendale, CA. Improve airflow, comfort and efficiency throughout your home.',
+  },
+  {
+    title: 'Heat Pumps',
+    slug: 'heat-pumps',
+    icon: 'thermometer-sun',
+    image: 'heat-pumps.jpg',
+    imageAlt: 'Outdoor heat pump unit next to a brick building',
+    credit: 'Unsplash – https://unsplash.com/photos/outdoor-heat-pump-unit-next-to-a-brick-building-4VCm8l6wLQY',
+    shortDescription: 'Efficient all-in-one heating and cooling, installed and serviced.',
+    description: `A heat pump heats and cools with one system by moving heat instead of burning fuel. We install, repair and maintain ducted heat pumps and ductless mini-split heat pumps, including conversions from gas furnaces and older air conditioners.
+
+We help you compare options, sizes and efficiency ratings, and point you to available utility rebates and incentives.`,
+    whyImportant: `The Glendale-area climate — hot summers and mild winters — is ideal for heat pumps. A modern heat pump can provide both heating and cooling with high efficiency, often lowering energy costs and replacing two pieces of equipment with one.
+
+Heat pumps also support all-electric homes and are frequently eligible for rebates, which can make an upgrade more affordable than expected.`,
+    whatToExpect: [
+      { title: 'Suitability check', text: 'We review your home, electrical service and ductwork to confirm a heat pump fits.' },
+      { title: 'Options and rebates', text: 'You get clear choices with expected efficiency and incentives.' },
+      { title: 'Professional install', text: 'Correct sizing, refrigerant charge and controls setup.' },
+      { title: 'Ongoing service', text: 'We repair and maintain heat pumps of all major brands.' },
+    ],
+    metaDescription: 'Heat pump installation and repair in Glendale, CA. Efficient heating and cooling, ducted and ductless mini-split heat pumps.',
+  },
+  {
+    title: 'Indoor Air Quality',
+    slug: 'indoor-air-quality',
+    icon: 'leaf',
+    image: 'indoor-air-quality.jpg',
+    imageAlt: 'Hand on top of a home air purifier',
+    credit: "Unsplash – https://unsplash.com/photos/a-persons-hand-is-on-top-of-a-black-and-silver-air-puri-KNJW4jA6_JI",
+    shortDescription: 'Filtration, purification and ventilation for cleaner indoor air.',
+    description: `We help reduce dust, allergens, smoke and odors with upgraded air filtration, whole-home air purifiers, UV lights, humidity control and fresh-air ventilation that work with your existing HVAC system.
+
+We start by understanding your concerns — allergies, pets, wildfire smoke, stuffy rooms — and recommend solutions that fit your system and budget.`,
+    whyImportant: `People spend most of their time indoors, and indoor air can contain more pollutants than outdoor air. In Southern California, seasonal wildfire smoke and dry conditions make good filtration especially valuable.
+
+Better indoor air quality can improve comfort, help allergy and asthma sufferers and keep your HVAC equipment cleaner.`,
+    whatToExpect: [
+      { title: 'Concerns review', text: 'We discuss what you notice and who in the home is affected.' },
+      { title: 'System check', text: 'We look at your filter setup, ducts and ventilation.' },
+      { title: 'Tailored solution', text: 'Filtration, purification or ventilation options that fit your system.' },
+      { title: 'Maintenance plan', text: 'We explain filter changes and upkeep so the benefits last.' },
+    ],
+    metaDescription: 'Indoor air quality solutions in Glendale, CA: air filtration, purifiers, UV lights and ventilation for cleaner indoor air.',
+  },
+]
+
+type AreaSeed = {
+  name: string
+  slug: string
+  icon: string
+  image: string
+  imageAlt: string
+  credit: string
+  shortDescription: string
+  description: string
+  localNotes: string[]
+  metaDescription: string
+}
+
+export const areas: AreaSeed[] = [
+  {
+    name: 'Glendale',
+    slug: 'glendale',
+    icon: 'building',
+    image: 'glendale.jpg',
+    imageAlt: 'Fountain and buildings in Glendale, California',
+    credit: 'Unsplash – https://unsplash.com/photos/water-fountain-in-front-of-brown-concrete-building-during-daytime-AeJTEk94m7Q',
+    shortDescription: 'Our home base — fast service across Glendale homes and businesses.',
+    description: `Glendale is where we are based, so we can usually reach you quickly — from downtown and the Brand Boulevard area to the hillside neighborhoods of Adams Hill, Verdugo Woodlands and Rossmoyne.
+
+Glendale's housing ranges from 1920s Spanish-style homes and post-war bungalows to modern condos and commercial buildings. We work on all of them, from replacing old wall furnaces to installing high-efficiency central systems and ductless mini-splits in homes without ductwork.`,
+    localNotes: [
+      'Hot inland summers put heavy demand on air conditioners.',
+      'Many older homes benefit from ductless or right-sized replacement systems.',
+      'Hillside homes often have long duct runs that need sealing and balancing.',
+    ],
+    metaDescription: 'HVAC repair, installation and maintenance in Glendale, CA. Local, licensed and insured heating and air conditioning contractor.',
+  },
+  {
+    name: 'Burbank',
+    slug: 'burbank',
+    icon: 'sun',
+    image: 'burbank.jpg',
+    imageAlt: 'Aerial view of Burbank with mountains in the background',
+    credit: 'Unsplash – https://unsplash.com/photos/an-aerial-view-of-a-city-with-mountains-in-the-background-9LXztI1zY_Y',
+    shortDescription: 'Heating and cooling service for Burbank homes and businesses.',
+    description: `We serve Burbank from the Media District to Magnolia Park, the Rancho and the hillside neighborhoods near the Verdugo Mountains.
+
+Burbank sits at the edge of the San Fernando Valley, where summer temperatures are often higher than closer to the coast. Many of the city's mid-century homes still run on older equipment — we help owners keep it running reliably or upgrade to quieter, more efficient systems.`,
+    localNotes: [
+      'Valley heat makes AC maintenance before summer especially worthwhile.',
+      'Mid-century homes often have undersized or leaky original ductwork.',
+      'Heat pumps are a strong fit for Burbank’s hot summers and mild winters.',
+    ],
+    metaDescription: 'HVAC services in Burbank, CA: AC repair, furnace repair, heat pumps and new system installation.',
+  },
+  {
+    name: 'La Crescenta-Montrose',
+    slug: 'la-crescenta-montrose',
+    icon: 'mountain',
+    image: 'la-crescenta-montrose.jpg',
+    imageAlt: 'Homes at the foot of the mountains',
+    credit: 'Unsplash – https://unsplash.com/photos/white-and-brown-concrete-houses-near-mountain-during-daytime-tqRIx61v8Ew',
+    shortDescription: 'Reliable heat for foothill winters and cooling for hot summers.',
+    description: `At the foot of the San Gabriel Mountains, La Crescenta-Montrose sees cooler winter nights than much of the area, so dependable heating matters here as much as air conditioning.
+
+We repair and maintain furnaces and heat pumps, install new systems and help homeowners improve comfort in split-level and hillside homes where some rooms are always warmer or cooler than others.`,
+    localNotes: [
+      'Cooler foothill nights mean furnaces see more use than in the flats.',
+      'Seasonal wildfire smoke makes better air filtration worth considering.',
+      'Split-level homes often need airflow balancing or zoning.',
+    ],
+    metaDescription: 'Heating and air conditioning services in La Crescenta-Montrose, CA. Furnace repair, AC repair and HVAC installation.',
+  },
+  {
+    name: 'La Cañada Flintridge',
+    slug: 'la-canada-flintridge',
+    icon: 'trees',
+    image: 'la-canada-flintridge.jpg',
+    imageAlt: 'Mountains at sunset above the valley',
+    credit: 'Unsplash – https://unsplash.com/photos/brown-and-black-mountains-under-white-clouds-and-blue-sky-during-daytime-aaWMokR-p44',
+    shortDescription: 'Comfort solutions for larger homes and multi-zone systems.',
+    description: `La Cañada Flintridge homes are often larger, with multiple levels or wings that are hard to keep comfortable with a single system. We design and install multi-zone and multi-system solutions, and service the equipment you already have.
+
+From high-efficiency furnace and AC replacements to ductless additions for converted garages and guest houses, we focus on quiet operation, even temperatures and tidy installations.`,
+    localNotes: [
+      'Larger homes benefit from zoning or multiple right-sized systems.',
+      'Quiet outdoor equipment and careful placement matter in residential settings.',
+      'Air filtration helps during wildfire smoke events in the foothills.',
+    ],
+    metaDescription: 'HVAC installation and service in La Cañada Flintridge, CA. Multi-zone systems, heat pumps, AC and furnace repair.',
+  },
+  {
+    name: 'Pasadena',
+    slug: 'pasadena',
+    icon: 'building',
+    image: 'pasadena.jpg',
+    imageAlt: 'Pasadena City Hall with palm trees and blue sky',
+    credit: 'Unsplash – https://unsplash.com/photos/pasadena-city-hall-with-palm-trees-and-blue-sky-0AUKyxYH97M',
+    shortDescription: 'HVAC service that respects Pasadena’s historic and modern homes.',
+    description: `Pasadena is known for its Craftsman bungalows and historic homes — beautiful buildings that were not designed with modern ductwork in mind. We help owners add or upgrade heating and cooling with minimal impact, often using ductless mini-splits or carefully routed, compact duct systems.
+
+We also service newer homes, condos and commercial spaces throughout Pasadena, from Bungalow Heaven to Old Town.`,
+    localNotes: [
+      'Ductless mini-splits are ideal for historic homes without existing ducts.',
+      'Older homes often have aging floor or wall furnaces worth replacing.',
+      'Summer heat in the San Gabriel Valley calls for reliable cooling.',
+    ],
+    metaDescription: 'HVAC services in Pasadena, CA: ductless mini-splits for historic homes, AC repair, furnace repair and new installations.',
+  },
+  {
+    name: 'Eagle Rock',
+    slug: 'eagle-rock',
+    icon: 'house',
+    image: 'eagle-rock.jpg',
+    imageAlt: 'View over hillside neighborhoods of northeast Los Angeles',
+    credit: 'Unsplash – https://unsplash.com/photos/a-view-of-a-city-from-the-top-of-a-hill-J-4CWGph46k',
+    shortDescription: 'Heating and cooling for Eagle Rock’s classic hillside homes.',
+    description: `Eagle Rock's mix of 1920s and mid-century homes on hilly streets brings its own HVAC challenges: limited attic space, original ductwork and rooms that heat up quickly in summer.
+
+We repair existing systems, replace aging furnaces and air conditioners, and install ductless or compact systems where traditional ducts are impractical.`,
+    localNotes: [
+      'Original ductwork in older homes is often leaky or undersized.',
+      'Ductless systems are a good option for additions and upstairs rooms.',
+      'Regular maintenance helps older equipment get through summer heat.',
+    ],
+    metaDescription: 'HVAC repair and installation in Eagle Rock, Los Angeles. AC, furnace, heat pump and ductless mini-split services.',
+  },
+  {
+    name: 'Atwater Village',
+    slug: 'atwater-village',
+    icon: 'house',
+    image: 'atwater-village.jpg',
+    imageAlt: 'Classic single-family house on a sunny street',
+    credit: 'Unsplash – https://unsplash.com/photos/a-house-with-a-truck-parked-in-front-of-it-XFQuzV6WXls',
+    shortDescription: 'Upgrades and repairs for Atwater Village bungalows and businesses.',
+    description: `Next door to Glendale along the LA River, Atwater Village is full of Spanish-style and Tudor bungalows, many of which still rely on wall heaters or window AC units.
+
+We help homeowners make the switch to efficient central or ductless systems, and we service the shops and restaurants along Glendale Boulevard too.`,
+    localNotes: [
+      'Many bungalows are good candidates for ductless heat pumps.',
+      'Wall furnaces should be inspected regularly for safe operation.',
+      'Small commercial spaces benefit from scheduled maintenance.',
+    ],
+    metaDescription: 'Heating and air conditioning services in Atwater Village, Los Angeles. Ductless heat pumps, AC and furnace repair.',
+  },
+  {
+    name: 'North Hollywood',
+    slug: 'north-hollywood',
+    icon: 'sun',
+    image: 'north-hollywood.jpg',
+    imageAlt: 'Single-family homes with palm trees under a blue sky',
+    credit: 'Unsplash – https://unsplash.com/photos/white-and-red-house-near-palm-trees-under-blue-sky-during-daytime-Ap1gRQoMXG0',
+    shortDescription: 'Cooling you can rely on through hot San Fernando Valley summers.',
+    description: `In North Hollywood, summer heat is serious — air conditioners work hard for months at a time. We keep them running with fast repairs and preventive maintenance, and we install efficient replacements when it is time.
+
+We work in single-family homes, apartments and condos, as well as offices and studios in and around the NoHo Arts District.`,
+    localNotes: [
+      'Extended valley heat waves make pre-summer AC tune-ups essential.',
+      'Condo and apartment systems often need compact or ductless solutions.',
+      'Upgrading to high-efficiency equipment can noticeably lower summer bills.',
+    ],
+    metaDescription: 'AC repair and HVAC services in North Hollywood, CA. Fast cooling repairs, maintenance and new system installation.',
+  },
+  {
+    name: 'Sun Valley',
+    slug: 'sun-valley',
+    icon: 'sun',
+    image: 'sun-valley.jpg',
+    imageAlt: 'City view with mountains in the background',
+    credit: 'Unsplash – https://unsplash.com/photos/a-view-of-a-city-with-mountains-in-the-background-yhgkib8p_W4',
+    shortDescription: 'HVAC repair and installation for Sun Valley homes and businesses.',
+    description: `Sun Valley, in the eastern San Fernando Valley, combines residential neighborhoods with light industrial and commercial properties — and some of the warmest summer temperatures in the area.
+
+We repair and replace residential systems, and we maintain rooftop and packaged units for small businesses so they keep running through the hottest months.`,
+    localNotes: [
+      'High summer temperatures put extra strain on outdoor units.',
+      'Dust from nearby industrial areas makes regular filter changes important.',
+      'Rooftop and packaged units benefit from scheduled maintenance.',
+    ],
+    metaDescription: 'HVAC services in Sun Valley, CA: residential and light commercial AC repair, maintenance and installation.',
+  },
+]
+
+export const aboutImage = {
+  file: 'team.jpg',
+  alt: 'The We R HVAC team',
+}
